@@ -5,12 +5,12 @@ const rentrouter = Router();
 
 
 
-rentrouter.get('/rent',getrent);
+rentrouter.get('/rentals',getrent);
 
-rentrouter.post('/rent',postrent);
+rentrouter.post('/rentals',postrent);
 
-rentrouter.put('/rent',updaterent);
+rentrouter.post('/rentals/:id/return',updaterent);
 
-rentrouter.delete('/rent',deleterents);
+rentrouter.delete('/rentals/:id',deleterents);
 
 export default rentrouter;
