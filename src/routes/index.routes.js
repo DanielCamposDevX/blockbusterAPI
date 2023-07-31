@@ -1,6 +1,6 @@
 import { Router } from "express";
 import rentrouter from "./rent.routes.js";
-import clientrouter from "./clients.routes.js";
+import clientrouter from "./customer.routes.js";
 import gamesrouter from "./games.routes.js";
 
 
