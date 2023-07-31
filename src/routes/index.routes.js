@@ -1,14 +1,14 @@
 import { Router } from "express";
-import rentrouter from "./rent.routes";
-import clientrouter from "./clients.routes";
-import gamesrouter from "./games.routes";
+import rentrouter from "./rent.routes.js";
+import clientrouter from "./clients.routes.js";
+import gamesrouter from "./games.routes.js";
 
 
-const router = Router();
+const indexrouter = Router();
 
-router.use(rentrouter);
-router.use(clientrouter);
-router.use(gamesrouter);
+indexrouter.use(rentrouter);
+indexrouter.use(clientrouter);
+indexrouter.use(gamesrouter);
 
 
-export default router;
+export default indexrouter;
