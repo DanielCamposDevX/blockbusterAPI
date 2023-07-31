@@ -36,7 +36,7 @@ export async function postclient(req, res) {
     const exists = await db.query('SELECT * FROM customers WHERE cpf = $1', [cpf])
     if (exists.rows.length > 0) { return res.sendStatus(409) }
     await db.query('INSERT INTO customers (name, cpf, phone, birthday) VALUES ($1 , $2, $3, $4);', [name, cpf, phone, birthday])
-    return(res.send)
+    return(res.sendStatus(201))
     }
     catch (err) {
         return res.status(500).send(err.message);
